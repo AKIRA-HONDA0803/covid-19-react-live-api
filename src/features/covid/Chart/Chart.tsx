@@ -37,8 +37,9 @@ const Chart: React.FC = () => {
       }}
     />
   );
-  return
-    <div className={styles.container}>{lineChart}</div>;
+  return (
+    <div className={styles.container}>{lineChart}</div>
+  );
 };
 
 export default Chart;

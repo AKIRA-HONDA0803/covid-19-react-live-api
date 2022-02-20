@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import styles from "./Cards.module.css";
 import CountUp from "react-countup";
-import { Card, CardContent, Typography, Grid } from "@material-ui/core"
+import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 
 import { GiHastyGrave } from "react-icons/gi";
 import { MdLocalHospital } from "react-icons/md";
@@ -25,6 +25,21 @@ const Cards: React.FC = () => {
               <CountUp
                 start={0}
                 end={daily[daily.length - 1].Confirmed}
+                duration={1.5}
+                separator=","
+              />
+            </Typography>
+          </CardContent>
+        </Grid>
+        <Grid item xs={12} md={3} component={Card} className={styles.recovered}>
+          <CardContent>
+            <Typography color="textSecondary" gutterBottom>
+              <AiFillLike /> Recovered persons
+            </Typography>
+            <Typography variant="h5">
+              <CountUp
+                start={0}
+                end={daily[daily.length - 1].Recovered}
                 duration={1.5}
                 separator=","
               />
